@@ -1,0 +1,5 @@
+~ Start
+set State.Dialogue_Window = true
+Professoressa: Buongiorno ragazzi benvenuti all'itis.
+set State.Dialogue_Window = false
+=> END

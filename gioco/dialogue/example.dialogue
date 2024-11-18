@@ -1,0 +1,8 @@
+~ Start
+set State.Dialogue_Window = true
+Professoressa: Buongiorno ragazzi benvenuti all'itis.
+Professoressa: Dirigetevi ai due laboratori di informatica per incontrare gli altri professori.
+Professoressa: Il laboratorio 1 si trova nella parte sinistra della scuola in cui siete adesso... Il laboratorio 2 invece si trova nella parte a destra della scuola.
+Professoressa: Buon lavoro.
+set State.Dialogue_Window = false
+=> END

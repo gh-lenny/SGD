@@ -1,0 +1,57 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="esperienza informatica ITIS"
+config/version="1.0"
+run/main_scene="res://levels/level.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/image="res://logo.png"
+boot_splash/fullsize=false
+config/icon="res://logo.png"
+
+[autoload]
+
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+State="*res://script/state.gd"
+Transition="*res://objects/transition.tscn"
+
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=600
+window/size/resizable=false
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
+[input]
+
+interazione={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://dialogue/example.dialogue", "res://dialogue/laboratorio_minigame.dialogue", "res://dialogue/lab2_dialogue.dialogue")
+
+[layer_names]
+
+2d_physics/layer_2="Actionables"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_etc2_astc=true

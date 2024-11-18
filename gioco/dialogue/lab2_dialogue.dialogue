@@ -1,0 +1,23 @@
+~ Start
+set State.Dialogue_Window = true
+if State.MgDone == false:
+	Professoressa laboratorio: Benvenuto nella scuola...
+	Professoressa laboratorio: Sei pronto per un test?
+	- Certo.
+		Professoressa laboratorio: Va bene allora, si comincia!
+		set State.MgDone = true
+		set State.Minigame2 = true
+	- Magari più tardi...
+		Professoressa laboratorio: E va bene...
+		Professoressa laboratorio: A dopo.
+else:
+	Professoressa laboratorio: Ciao di nuovo, vorresti rifare il test?
+	- Sì!
+		Professoressa laboratorio: Ok.
+		set State.Minigame2 = true
+	- No...
+		Professoressa laboratorio: va bene.
+		Professoressa laboratorio: A dopo.
+
+set State.Dialogue_Window = false
+=> END

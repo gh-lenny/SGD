@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3rl85i6hgqkb"]
+
+[ext_resource type="Texture2D" uid="uid://b5faraojpfex2" path="res://sprite/white.jpg" id="1_0pvtk"]
+[ext_resource type="Script" path="res://script/actionable.gd" id="1_sinix"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oyk0k"]
+radius = 16.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d33dp"]
+size = Vector2(16, 16)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 3
+script = ExtResource("1_sinix")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oyk0k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0166667, 0.0166667)
+texture = ExtResource("1_0pvtk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_d33dp")
